@@ -1,0 +1,51 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.smartqueue:smartqueue-backend >------------------
+[INFO] Building SmartQueue Backend 0.1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.5:run (default-cli) > test-compile @ smartqueue-backend >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ smartqueue-backend ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ smartqueue-backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ smartqueue-backend ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ smartqueue-backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.3.5:run (default-cli) < test-compile @ smartqueue-backend <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.5:run (default-cli) @ smartqueue-backend ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-buildpack-platform/3.3.5/spring-boot-buildpack-platform-3.3.5.pom
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/3.3.5/spring-boot-loader-tools-3.3.5.pom
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.pom
+Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.12.11/micrometer-observation-1.12.11.pom
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.5.0/maven-shade-plugin-3.5.0.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13.850 s
+[INFO] Finished at: 2026-08-11T22:58:55+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.5:run (default-cli) on project smartqueue-backend: Execution default-cli of goal org.springframework.boot:spring-boot-maven-plugin:3.3.5:run failed: Plugin org.springframework.boot:spring-boot-maven-plugin:3.3.5 or one of its dependencies could not be resolved:
+[ERROR] 	Failed to read artifact descriptor for org.springframework.boot:spring-boot-buildpack-platform:jar:3.3.5
+[ERROR] 	Failed to read artifact descriptor for org.springframework.boot:spring-boot-loader-tools:jar:3.3.5
+[ERROR] 	Failed to read artifact descriptor for org.apache.maven.shared:maven-common-artifact-filters:jar:3.3.2
+[ERROR] 	Failed to read artifact descriptor for io.micrometer:micrometer-observation:jar:1.12.11
+[ERROR] 	Failed to read artifact descriptor for org.apache.maven.plugins:maven-shade-plugin:jar:3.5.0
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginResolutionException

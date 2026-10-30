@@ -1,0 +1,27 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Java / Maven
+.m2/
+backend/target/
+backend/data/
+*.mv.db
+*.trace.db
+
+# Node / Vite
+.npm-cache/
+frontend/node_modules/
+frontend/dist/
+
+# Python
+ai-service/.venv/
+ai-service/**/__pycache__/
+ai-service/.pytest_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

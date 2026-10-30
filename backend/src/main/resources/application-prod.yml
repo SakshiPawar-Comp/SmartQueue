@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    hikari:
+      minimum-idle: ${DB_POOL_MIN_IDLE:5}
+      maximum-pool-size: ${DB_POOL_MAX_SIZE:20}
+      connection-timeout: ${DB_POOL_CONN_TIMEOUT_MS:30000}
+      idle-timeout: ${DB_POOL_IDLE_TIMEOUT_MS:600000}
+      max-lifetime: ${DB_POOL_MAX_LIFETIME_MS:1800000}
+      pool-name: SmartQueueHikariPool
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+  flyway:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: when-authorized
+      probes:
+        enabled: true
+
+smartqueue:
+  refresh-token:
+    secure: ${REFRESH_TOKEN_SECURE:true}
+
+security:
+  hsts:
+    enabled: ${SECURITY_HSTS_ENABLED:true}

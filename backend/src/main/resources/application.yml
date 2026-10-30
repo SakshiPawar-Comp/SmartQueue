@@ -1,0 +1,63 @@
+spring:
+  application:
+    name: smartqueue-backend
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:smartqueue}
+    username: ${POSTGRES_USER:smartqueue}
+    password: ${POSTGRES_PASSWORD:change-me-local}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+  jackson:
+    default-property-inclusion: non_null
+  mail:
+    host: ${SPRING_MAIL_HOST:smtp.gmail.com}
+    port: ${SPRING_MAIL_PORT:587}
+    username: sp448846@gmail.com
+    password: qdvtxikwrnhfsndp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    default-encoding: UTF-8
+
+server:
+  port: ${SERVER_PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+jwt:
+  secret: ${JWT_SECRET:change-me-to-at-least-32-random-bytes-for-dev-only}
+  issuer: ${JWT_ISSUER:smartqueue-local}
+  expiration:
+    access: ${JWT_ACCESS_EXPIRATION_MS:900000}
+    refresh: ${JWT_REFRESH_EXPIRATION_MS:604800000}
+
+smartqueue:
+  phase: "Phase 1 - project setup and architecture"
+  ai-service-url: ${SMARTQUEUE_AI_SERVICE_URL:http://localhost:8000}
+  refresh-token:
+    cookie-name: sq_rt
+    cookie-path: /api/auth/refresh
+    secure: ${REFRESH_TOKEN_SECURE:false}
+
+cors:
+  allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000}
